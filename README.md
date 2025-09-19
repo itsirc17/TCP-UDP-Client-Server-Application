@@ -1,4 +1,4 @@
-# PROTOCOALE DE COMUNICATIE Tema 2 - Aplicatie client-server TCP si UDP pentru gestionarea mesajelor
+# PROTOCOALE DE COMUNICATIE - Aplicatie client-server TCP si UDP pentru gestionarea mesajelor
 
 ## DESCRIERE GENERALĂ
 Aceasta aplicatie implementeaza un server care face legatura intre:
@@ -7,7 +7,7 @@ Aceasta aplicatie implementeaza un server care face legatura intre:
 
 ### IMPLEMENTARE
 
-#### INSPIRATIE LAB7
+#### INSPIRATIE LAB7(https://pcom.pages.upb.ro/labs/lab7/lecture.html)
 Punctul de plecare al acestei teme a fost laboratorul 7 (Protocolul TCP. Multiplexare IO.)
 Functiile de send_all, recv_all, modul cum este folosita multiplexarea si functiile pe sockets, dar si logica din main sunt implementate in exact acelasi mod in care am rezolvat si laboratorul.
 
@@ -28,6 +28,3 @@ Principalul mod in care se trimit mesaje de la server la client este urmatorul:
 Pentru a preveni concatenarea mesajelor, serverul trimite intai lungimea mesajului (4 octeti, in network byte order), iar apoi trimite si mesajul propriu-zis, de lungime exacta.
 
 In acelasi mod, daca serverul se inchide, sau daca un client incearca sa se conecteze, dar exista deja un client cu ID ul respectiv conectat, serverul trimite un mesaj catre server pentru a-si opri conexiunea.
-
-
-Wildcards (* și +) nu sunt implementate
